@@ -8,7 +8,8 @@ class Feature extends Component{
         const items = options.map((item,idx) => {
             const itemHash = slugify(JSON.stringify(item));
             return (
-              <Option 
+              <Option
+                key={idx} 
                 itemHash={itemHash+idx}
                 feature={feature} 
                 item={item}

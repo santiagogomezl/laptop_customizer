@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Builder from './Builder/Builder';
 import Summary from './Summary/Summary';
+import {FEATURES} from './store.js';
+
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 
@@ -49,7 +51,7 @@ class App extends Component {
         </header>
         <main>
           <Builder 
-            features={this.props.features}
+            features={FEATURES}
             selectedOption={this.state.selected}
             handleUpdate={(feature, newValue) => this.updateFeature(feature, newValue)}
           />
